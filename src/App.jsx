@@ -14,7 +14,12 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <div className="flex items-center gap-4">
           <Link to="/" className="flex items-center justify-center shrink-0">
-            <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Lessinggymnasium Braunschweig Logo" className="w-12 h-12 rounded object-contain" />
+            <img 
+              src={`${import.meta.env.BASE_URL}logo.png`} 
+              alt="Lessinggymnasium Braunschweig Logo" 
+              className="w-12 h-12 rounded object-contain" 
+              title="credits; Ayse Bilge Keles" 
+            />
           </Link>
           <div>
             <h1 className="text-2xl font-bold text-green-700">{t('title')}</h1>
