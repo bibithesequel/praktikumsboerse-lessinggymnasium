@@ -13,13 +13,17 @@ const Header = () => {
     <header className="bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <div className="flex items-center gap-4">
-          <Link to="/" className="flex items-center justify-center shrink-0">
+          <Link to="/" className="group relative flex items-center justify-center shrink-0">
             <img 
               src={`${import.meta.env.BASE_URL}logo.png`} 
               alt="Lessinggymnasium Braunschweig Logo" 
               className="w-12 h-12 rounded object-contain" 
-              title="credits; Ayse Bilge Keles" 
             />
+            <div className="absolute top-full left-0 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-50">
+              <div className="bg-gray-800 text-white text-xs py-1.5 px-3 rounded shadow-lg whitespace-nowrap font-medium">
+                credits: Ayse Bilge Keles &lt;ayse.bilge.keles@lg-bs.de&gt;
+              </div>
+            </div>
           </Link>
           <div>
             <h1 className="text-2xl font-bold text-green-700">{t('title')}</h1>
