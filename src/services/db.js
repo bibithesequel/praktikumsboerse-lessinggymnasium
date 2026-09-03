@@ -54,7 +54,9 @@ export const seedTestData = async () => {
       description: 'Einblicke in die IT-Abteilung und agile Softwareentwicklung. Kennenlernen von Programmiersprachen und Datenbanken.',
       requirements: 'Interesse an Computern, logisches Denken.',
       contact: 'karriere@vwfs.com',
-      website: 'https://vwfs.com'
+      website: 'https://vwfs.com',
+      minAge: 15,
+      paid: 'Bezahlt'
     },
     {
       title: 'Schülerpraktikum Verkauf',
@@ -65,7 +67,9 @@ export const seedTestData = async () => {
       description: 'Praktikum im Store. Einblicke in Verkauf, Warenpräsentation und Kundenberatung.',
       requirements: 'Offenheit, Kommunikationsstärke.',
       contact: 'jobs@newyorker.de',
-      website: 'https://newyorker.de'
+      website: 'https://newyorker.de',
+      minAge: 14,
+      paid: 'Unbezahlt'
     },
     {
       title: 'Praktikant (m/w/d) im Labor',
@@ -76,7 +80,9 @@ export const seedTestData = async () => {
       description: 'Einführung in einfache laborpraktische Tätigkeiten und Begleitung der Forscher.',
       requirements: 'Gute Noten in Biologie und Chemie.',
       contact: 'info@helmholtz-hzi.de',
-      website: 'https://helmholtz-hzi.de'
+      website: 'https://helmholtz-hzi.de',
+      minAge: 16,
+      paid: 'Unbezahlt'
     },
     {
       title: 'Kaufmännisches Praktikum',
@@ -87,7 +93,9 @@ export const seedTestData = async () => {
       description: 'Einblicke in die Abteilungen Einkauf, Marketing und Rechnungswesen.',
       requirements: 'Interesse an kaufmännischen Zusammenhängen.',
       contact: 'karriere@nordzucker.com',
-      website: 'https://nordzucker.com'
+      website: 'https://nordzucker.com',
+      minAge: 15,
+      paid: 'Unbezahlt'
     }
   ];
 

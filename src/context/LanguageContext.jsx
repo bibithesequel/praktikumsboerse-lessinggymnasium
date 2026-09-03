@@ -28,7 +28,11 @@ const translations = {
     requirements: 'Voraussetzungen',
     allCategories: 'Alle Branchen',
     allLocations: 'Alle Orte',
-    seedData: 'Testdaten generieren'
+    seedData: 'Testdaten generieren',
+    minAge: 'Mindestalter',
+    payment: 'Bezahlung',
+    paid: 'Bezahlt',
+    unpaid: 'Unbezahlt'
   },
   en: {
     title: 'Internship Exchange',
@@ -57,7 +61,11 @@ const translations = {
     requirements: 'Requirements',
     allCategories: 'All Industries',
     allLocations: 'All Locations',
-    seedData: 'Generate Test Data'
+    seedData: 'Generate Test Data',
+    minAge: 'Minimum Age',
+    payment: 'Payment',
+    paid: 'Paid',
+    unpaid: 'Unpaid'
   }
 };
 

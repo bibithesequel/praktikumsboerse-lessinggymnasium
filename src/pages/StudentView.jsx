@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { getPraktikumsstellen } from '../services/db';
-import { Search, MapPin, Clock, Building2, Briefcase, CheckCircle2 } from 'lucide-react';
+import { Search, MapPin, Clock, Building2, Briefcase, CheckCircle2, User, Coins } from 'lucide-react';
 
 const StudentView = () => {
   const { t } = useLanguage();
@@ -139,6 +139,14 @@ const StudentView = () => {
                   <div className="flex items-center gap-2">
                     <Clock size={16} className="text-gray-400" />
                     <span>{stelle.duration}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <User size={16} className="text-gray-400" />
+                    <span>{stelle.minAge ? `Ab ${stelle.minAge} Jahren` : 'Kein Mindestalter'}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Coins size={16} className="text-gray-400" />
+                    <span>{stelle.paid === 'Bezahlt' ? t('paid') : t('unpaid')}</span>
                   </div>
                 </div>
               </div>

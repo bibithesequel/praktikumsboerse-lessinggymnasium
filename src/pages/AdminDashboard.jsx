@@ -21,7 +21,9 @@ const AdminDashboard = () => {
     description: '',
     requirements: '',
     contact: '',
-    website: ''
+    website: '',
+    minAge: '',
+    paid: 'Unbezahlt'
   });
 
   const [companySuggestions, setCompanySuggestions] = useState([]);
@@ -60,7 +62,7 @@ const AdminDashboard = () => {
   };
 
   const resetForm = () => {
-    setFormData({ title: '', category: '', company: '', location: '', duration: '', description: '', requirements: '', contact: '', website: '' });
+    setFormData({ title: '', category: '', company: '', location: '', duration: '', description: '', requirements: '', contact: '', website: '', minAge: '', paid: 'Unbezahlt' });
     setEditingId(null);
   }
 
@@ -195,6 +197,19 @@ const AdminDashboard = () => {
               <label className="block text-sm font-medium text-gray-700 mb-1">{t('duration')}</label>
               <input type="text" required className="w-full px-3 py-2 border border-gray-300 rounded-md" 
                 value={formData.duration} onChange={(e) => setFormData({...formData, duration: e.target.value})} />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">{t('minAge')}</label>
+              <input type="number" min="0" className="w-full px-3 py-2 border border-gray-300 rounded-md" 
+                value={formData.minAge || ''} onChange={(e) => setFormData({...formData, minAge: e.target.value})} />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">{t('payment')}</label>
+              <select className="w-full px-3 py-2 border border-gray-300 rounded-md bg-white" 
+                value={formData.paid || 'Unbezahlt'} onChange={(e) => setFormData({...formData, paid: e.target.value})}>
+                <option value="Unbezahlt">{t('unpaid')}</option>
+                <option value="Bezahlt">{t('paid')}</option>
+              </select>
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">{t('contact')}</label>
