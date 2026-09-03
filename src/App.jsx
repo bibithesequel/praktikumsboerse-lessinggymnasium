@@ -13,10 +13,9 @@ const Header = () => {
     <header className="bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <div className="flex items-center gap-4">
-          {/* Logo placeholder, can be replaced with actual image */}
-          <div className="w-12 h-12 bg-green-700 text-white flex items-center justify-center font-bold text-xl rounded-full">
-            LG
-          </div>
+          <Link to="/" className="flex items-center justify-center shrink-0">
+            <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Lessinggymnasium Braunschweig Logo" className="w-12 h-12 rounded object-contain" />
+          </Link>
           <div>
             <h1 className="text-2xl font-bold text-green-700">{t('title')}</h1>
             <p className="text-sm text-gray-500">{t('subtitle')}</p>
