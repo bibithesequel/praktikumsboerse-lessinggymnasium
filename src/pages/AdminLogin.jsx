@@ -14,13 +14,6 @@ const AdminLogin = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      if (!auth.app) {
-        // Mock login if firebase isn't configured
-        if (email === 'admin@lessinggymnasium.de' && password === 'admin') {
-          navigate('/admin/dashboard');
-          return;
-        }
-      }
       await signInWithEmailAndPassword(auth, email, password);
       navigate('/admin/dashboard');
     } catch (err) {

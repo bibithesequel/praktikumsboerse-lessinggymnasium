@@ -15,29 +15,9 @@ const StudentView = () => {
       // Fallback mock data if Firebase is not yet configured
       try {
         const data = await getPraktikumsstellen();
-        if (data.length === 0) throw new Error("No data or not configured");
         setStellen(data);
       } catch (e) {
-        setStellen([
-          {
-            id: '1',
-            company: 'Volkswagen Financial Services',
-            location: 'Braunschweig',
-            duration: '2-3 Wochen',
-            description: 'Einblicke in die IT-Abteilung und Softwareentwicklung.',
-            contact: 'karriere@vwfs.com',
-            website: 'https://vwfs.com'
-          },
-          {
-            id: '2',
-            company: 'New Yorker',
-            location: 'Braunschweig',
-            duration: '2 Wochen',
-            description: 'Praktikum im Bereich E-Commerce und Marketing.',
-            contact: 'jobs@newyorker.de',
-            website: 'https://newyorker.de'
-          }
-        ]);
+        console.error("Error fetching data:", e);
       }
       setLoading(false);
     };
