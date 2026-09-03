@@ -23,6 +23,12 @@ const translations = {
     password: 'Passwort',
     login: 'Anmelden',
     website: 'Webseite',
+    jobTitle: 'Titel (Rolle)',
+    category: 'Branche',
+    requirements: 'Voraussetzungen',
+    allCategories: 'Alle Branchen',
+    allLocations: 'Alle Orte',
+    seedData: 'Testdaten generieren'
   },
   en: {
     title: 'Internship Exchange',
@@ -46,6 +52,12 @@ const translations = {
     password: 'Password',
     login: 'Login',
     website: 'Website',
+    jobTitle: 'Title (Role)',
+    category: 'Industry',
+    requirements: 'Requirements',
+    allCategories: 'All Industries',
+    allLocations: 'All Locations',
+    seedData: 'Generate Test Data'
   }
 };
 

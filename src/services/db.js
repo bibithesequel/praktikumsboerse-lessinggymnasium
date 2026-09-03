@@ -42,3 +42,56 @@ export const deletePraktikumsstelle = async (id) => {
     throw error;
   }
 };
+
+export const seedTestData = async () => {
+  const testData = [
+    {
+      title: 'Praktikum Softwareentwicklung',
+      category: 'IT',
+      company: 'Volkswagen Financial Services',
+      location: 'Braunschweig',
+      duration: '2-3 Wochen',
+      description: 'Einblicke in die IT-Abteilung und agile Softwareentwicklung. Kennenlernen von Programmiersprachen und Datenbanken.',
+      requirements: 'Interesse an Computern, logisches Denken.',
+      contact: 'karriere@vwfs.com',
+      website: 'https://vwfs.com'
+    },
+    {
+      title: 'Schülerpraktikum Verkauf',
+      category: 'Wirtschaft',
+      company: 'New Yorker',
+      location: 'Braunschweig',
+      duration: '2 Wochen',
+      description: 'Praktikum im Store. Einblicke in Verkauf, Warenpräsentation und Kundenberatung.',
+      requirements: 'Offenheit, Kommunikationsstärke.',
+      contact: 'jobs@newyorker.de',
+      website: 'https://newyorker.de'
+    },
+    {
+      title: 'Praktikant (m/w/d) im Labor',
+      category: 'Naturwissenschaften',
+      company: 'Helmholtz-Zentrum für Infektionsforschung',
+      location: 'Braunschweig',
+      duration: '2 Wochen',
+      description: 'Einführung in einfache laborpraktische Tätigkeiten und Begleitung der Forscher.',
+      requirements: 'Gute Noten in Biologie und Chemie.',
+      contact: 'info@helmholtz-hzi.de',
+      website: 'https://helmholtz-hzi.de'
+    },
+    {
+      title: 'Kaufmännisches Praktikum',
+      category: 'Wirtschaft',
+      company: 'Nordzucker',
+      location: 'Braunschweig',
+      duration: '3 Wochen',
+      description: 'Einblicke in die Abteilungen Einkauf, Marketing und Rechnungswesen.',
+      requirements: 'Interesse an kaufmännischen Zusammenhängen.',
+      contact: 'karriere@nordzucker.com',
+      website: 'https://nordzucker.com'
+    }
+  ];
+
+  for (const stelle of testData) {
+    await addPraktikumsstelle(stelle);
+  }
+};
