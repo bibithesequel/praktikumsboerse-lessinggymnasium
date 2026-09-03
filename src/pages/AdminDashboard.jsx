@@ -173,7 +173,7 @@ const AdminDashboard = () => {
                       className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-3"
                       onClick={() => selectCompany(c)}
                     >
-                      {c.logo ? <img src={c.logo} alt="" className="w-6 h-6 object-contain" /> : <div className="w-6 h-6 bg-gray-200 rounded"></div>}
+                      {c.domain ? <img src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://${c.domain}&size=128`} alt="" className="w-6 h-6 object-contain" /> : <div className="w-6 h-6 bg-gray-200 rounded"></div>}
                       <div className="flex flex-col">
                         <span className="text-sm font-medium">{c.name}</span>
                         <span className="text-xs text-gray-500">{c.domain}</span>

@@ -95,7 +95,7 @@ const StudentView = () => {
                 <div className="flex items-start gap-4 mb-3">
                   {stelle.website ? (
                     <img 
-                      src={`https://logo.clearbit.com/${stelle.website.replace(/^https?:\/\//, '').split('/')[0]}`} 
+                      src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${stelle.website}&size=128`} 
                       alt={`${stelle.company} logo`}
                       className="w-12 h-12 rounded object-contain bg-white border border-gray-100 shrink-0"
                       onError={(e) => { e.target.style.display = 'none'; }}
